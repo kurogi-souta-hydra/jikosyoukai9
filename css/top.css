@@ -94,9 +94,9 @@ aboutbtn
 }
 
 /*-------------------------------------------
-works-btn
+worksbtn
 -------------------------------------------*/
-.works-btn {
+.worksbtn {
   background-color: #B7E4D8;
   clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
   padding: 120px 0;
@@ -112,6 +112,28 @@ blogbtn
   padding: 120px 0;
   margin-bottom: 80px;
 }
+
+/*-------------------------------------------
+左からスライド
+-------------------------------------------*/
+.slideInL-img {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.slideInL-img.is-visible {
+  animation: slideInL 1s ease-in-out forwards;
+}
+@keyframes slideInL {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 
 /*-------------------------------------------
 profile-item 共通
