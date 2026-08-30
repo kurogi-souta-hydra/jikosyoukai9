@@ -68,4 +68,9 @@ Profile
   #profile .img .circle{
     width: 180px;
   }
+  .youtube iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
 }
