@@ -25,8 +25,9 @@
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/top.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
-    <script src="js/main.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/main.js"></script>
   </head>
 
   <body>
@@ -60,6 +61,12 @@
         <div class="img">
           <img src="img/top/FF14guridania.png" alt="FF14のグリダニアの風景">
         </div>
+        <!-- 画像の中に重なるように配置 -->
+        <div class="hero-text">
+          <h1>Souta Kurogi</h1>
+          <p>Unityで挑む2Dゲーム開発｜ポートフォリオ</p>
+          <a href="works.html" class="btn-works">作品（ゲーム）を見る</a>
+        </div>
       </div>
 
       <!-- profile -->
@@ -86,7 +93,7 @@
       <!-- /parallax -->
 
       <section class="aboutbtn">
-        <div class="profile-item wrapper slideInL-img">
+        <div class="profile-item wrapper fadein">
           <div class="img">
             <img src="img/top/FF14kuritawa.png" alt="FF14のクリタワの風景">
           </div>
@@ -102,7 +109,7 @@
       </section>
 
       <section class="worksbtn">
-        <div class="profile-item wrapper slideInL-img">
+        <div class="profile-item wrapper fadein">
           <div class="text">
             <h2 class="section-title-l">
               <span class="en">Works</span>
@@ -118,7 +125,7 @@
       </section>
 
       <section class="blogbtn">
-        <div class="profile-item wrapper slideInL-img">
+        <div class="profile-item wrapper fadein">
           <div class="img">
             <img src="img/top/FF14fuu.png" alt="FF14の風景">
           </div>

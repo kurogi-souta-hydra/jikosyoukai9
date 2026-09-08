@@ -7,7 +7,6 @@ Mainvisual
   width: 100%;
   height: 100svh;
   margin-bottom: 80px;
-  position: relative;
 }
 .mainvisual .img {
   width: 100%;
@@ -29,39 +28,6 @@ Mainvisual
     opacity: 1;
     filter: blur(0);
   }
-}
-/* 画像の上にテキストを重ねる */
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* 画面の中央に配置 */
-  text-align: center;
-  color: #ffffff;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7); /* 文字を読みやすくする影 */
-  width: 90%;
-}
-.hero-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-.hero-text p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-/* ボタンのデザイン */
-.btn-works {
-  display: inline-block;
-  padding: 12px 28px;
-  background-color: #0056b3;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-.btn-works:hover {
-  background-color: #003d80;
 }
 
 /*-------------------------------------------
@@ -148,17 +114,26 @@ blogbtn
 }
 
 /*-------------------------------------------
-fadein
+左からスライド
 -------------------------------------------*/
-.fadein {
-  opacity: 0;
+.slideInL-img {
   transform: translateX(-100%);
-  transition: all 1s;
+  opacity: 0;
 }
-.fadein.inview {
-  opacity:1;
-  transform: translateX(0);
+.slideInL-img.is-visible {
+  animation: slideInL 1s ease-in-out forwards;
 }
+@keyframes slideInL {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 
 /*-------------------------------------------
 profile-item 共通
@@ -180,7 +155,6 @@ profile-item 共通
 }
 .profile-item .img:hover img{
   transform:scale(1.08);
-  filter: brightness(1.25); /* 1.0より大きくすると白っぽく明るくなります */
 }
 #profile .img{
   overflow: visible;

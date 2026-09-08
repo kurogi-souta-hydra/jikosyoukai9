@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+/* ブログ一覧 */
+.blog-list {
+  margin-bottom: 80px;
+}
+.blog-list .post-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 20px;
+  margin-bottom: 40px;
+}
+.blog-list .post-list li .img {
+  width: 100%;
+  height: 245px; /* 固定したい高さ */
+  overflow: hidden;
+  border-radius: 30px;
+}
+.blog-list .post-list li .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 30px;
+}
+.blog-list .post-list li time {
+  font-size: 12px;
+}
+.blog-list .post-list li .title {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.blog-list .pagenation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog-list .pagenation li {
+  margin: 0 10px;
+}
+
+/* ブログ詳細 */
+.blog-post {
+  display: flex;
+}
+.blog-post .post {
+  width: 100%;
+  max-width: 680px;
+  margin-right: 40px;
+}
+.blog-post .post .thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 30px;
+  margin-bottom: 40px;
+}
+.blog-post .post .thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.blog-post .post .info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.blog-post .post .info time {
+  font-size: 12px;
+}
+.blog-post .post .info .category {
+  background-color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 2px 4px;
+  margin-left: 10px;
+}
+.blog-post .post .title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.blog-post .post .content ul {
+  margin: 0 0 30px 18px;
+}
+.blog-post .post .content li {
+  line-height: 1.8;
+  list-style-type: disc;
+  margin-left: 20px;   /* 左側に余白 */
+}
+.blog-post .post .content p {
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+.blog-post .post .content .youtube {
+  margin-bottom: 30px;
+}
+.blog-post .post .content .youtube iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+/* Blog_table */
+.blog-post .post .content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  background-color: #ffffff;
+}
+.blog-post .post .content th,
+.blog-post .post .content td {
+  border: 1px solid #dcdcdc;
+  padding: 12px;
+  text-align: left;
+}
+.blog-post .post .content th {
+  background-color: #b7e4d8;
+}
+.blog-post .post .content tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+.blog-post .post .content tr:nth-child(even) {
+  background-color: #eaf7f2;
+}
+.blog-post .post .content tr:hover {
+  background-color: #d6f1e8;
+}
+
+.blog-post .sidebar {
+  max-width: 280px;
+}
+.blog-post .sidebar .title {
+  border-bottom: solid 1px #707070;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.blog-post .sidebar .tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.blog-post .sidebar .tag-list li {
+  background-color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 2px 4px;
+  margin: 0 10px 10px 0;
+}
+.blog-post .sidebar .post-list li {
+  margin-bottom: 10px;
+}
+.blog-post .sidebar .post-list a {
+  display: flex;
+  align-items: center;
+}
+.blog-post .sidebar .post-list .post-thumbnail {
+  width: 80px;
+  height: 48px;
+  flex-shrink: 0;
+  margin-right: 10px;
+  overflow: hidden;
+}
+.blog-post .sidebar .post-list .post-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.blog-post .sidebar .post-list .post-title {
+  font-size: 12px;
+}
+
+/* ボタン */
+.blogbtn {
+  width: 100%;
+  max-width: 200px;
+  border: solid 1px #333;
+  border-radius: 30px;
+  display: block;
+  font-size: 14px;
+  padding: 10px 0;
+  position: relative;
+  text-align: center;
+  margin: 0 auto 80px;
+}
+.blogbtn::before {
+  content: "";
+  width: 25px;
+  height: 1px;
+  background-color: #333;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}
+.blogbtn::after {
+  content: "";
+  width: 8px;
+  height: 1px;
+  background-color: #333;
+  position: absolute;
+  top: 18px;
+  right: 14px;
+  transform: rotate(35deg);
+}
+.blogbtn:hover {
+  background-color: #333;
+  color: #fff;
+}
+.blogbtn:hover::before {
+  background-color: #fff;
+}
+.blogbtn:hover::after {
+  background-color: #fff;
+}
+
+/*-------------------------------------------
+スマートフォン
+-------------------------------------------*/
+@media screen and (max-width: 767px) {
+  /* ブログ一覧 */
+  .blog-list {
+    margin-bottom: 60px;
+  }
+  .blog-list .post-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ブログ詳細 */
+  .blog-post {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .blog-post .post {
+    margin: 0 0 40px;
+  }
+
+  /* ボタン */
+  .blogbtn {
+    margin: 0 auto 60px;
+  }
+}
